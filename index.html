@@ -16,8 +16,15 @@
     a{color:var(--brand);text-decoration:none}
     .container{max-width:920px;margin:0 auto;padding:0 20px}
 
+    /* Smooth scroll */
+    html{ scroll-behavior: smooth; }
+
     /* === HERO (Joanna-style dynamic header) === */
-    .hero-wrap{position:relative;min-height:72vh;display:grid;place-items:center;overflow:hidden}
+    .hero-wrap{
+      position:relative;
+      min-height:86vh;   /* taller hero */
+      display:grid;place-items:center;overflow:hidden
+    }
     .hero-bg{position:absolute;inset:0;background:
       radial-gradient(1200px 600px at 10% 10%, rgba(122,162,255,.15), transparent),
       radial-gradient(900px 500px at 90% 20%, rgba(167,139,250,.14), transparent),
@@ -28,25 +35,38 @@
     .hero-noise{position:absolute;inset:0;opacity:.09;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2"/></filter><rect width="100" height="100" filter="url(%23n)" opacity="0.6"/></svg>')}
     canvas#particles{position:absolute;inset:0;opacity:.55}
 
-    .hero{position:relative;z-index:3;text-align:center;padding:80px 0}
+    .hero{
+      position:relative;z-index:3;text-align:center;
+      padding:96px 0;   /* extra breathing room */
+    }
     .hero h1{font-size:clamp(32px, 6vw, 56px);margin:0 0 10px 0;font-weight:800;letter-spacing:.3px}
     .hero .avatar {
-  width:164px;
-  height:164px;
-  border-radius:9999px;
-  object-fit:cover;
-  object-position:50% 35%; 
-  border:2px solid var(--border);
-  box-shadow:0 6px 30px rgba(122,162,255,.15);
-  margin-bottom:14px;
-  background:#0f1722;
-}
-
+      width:164px; height:164px; border-radius:9999px;
+      object-fit:cover; object-position:50% 35%;
+      border:2px solid var(--border);
+      box-shadow:0 6px 30px rgba(122,162,255,.15);
+      margin-bottom:14px; background:#0f1722;
+    }
     .hero .tag{font-size:clamp(14px, 2.6vw, 18px);color:var(--muted);margin-bottom:18px}
     .hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
     .btn{display:inline-block;background:#1f6feb;border:1px solid #3a86ff;padding:10px 14px;border-radius:12px;color:white}
     .btn.ghost{background:transparent;border-color:var(--border)}
-    .badge{display:inline-block;margin-top:10px;padding:6px 10px;border-radius:999px;border:1px solid var(--border);color:var(--muted);font-size:13px}
+
+    /* Scroll indicator (bouncing arrow) */
+    .scroll-indicator{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:42px; height:42px; margin-top:26px;
+      border:1px solid var(--border); border-radius:9999px;
+      color:#b9c6d6; opacity:.9; text-decoration:none;
+      animation:bounce 1.8s infinite;
+      transition:opacity .2s ease, transform .2s ease;
+    }
+    .scroll-indicator:hover{ opacity:1; transform: translateY(1px); }
+    @keyframes bounce{
+      0%,20%,50%,80%,100%{ transform: translateY(0); }
+      40%{ transform: translateY(6px); }
+      60%{ transform: translateY(3px); }
+    }
 
     /* Fixed, minimal top nav */
     header.site{
@@ -101,6 +121,12 @@
         <a class="btn" href="#projects">View Projects</a>
         <a class="btn ghost" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
       </div>
+      <!-- Bouncing arrow: centered below CTAs -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About">
+        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <path d="M12 16l-6-6h12l-6 6z" fill="currentColor"/>
+        </svg>
+      </a>
     </div>
   </div>
 
