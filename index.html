@@ -7,7 +7,7 @@
   <meta name="description" content="Eva Mpagi — Data Scientist. Portfolio, CV, and selected projects." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,800;1,400;1,600&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#0b0f14; --card:#0f1722; --muted:#a9b4c0; --border:#1e2a3a;
@@ -59,14 +59,16 @@
 
         /* NEW: Intro line style */
     .intro-line{
-      margin:10px 0 20px 0;
-      font-size:clamp(15px,2vw,18px);
-      color:#86efac;         /* soft mint accent */
-      font-weight:500;
-      font-style: italic;      /* ← italic */
-      opacity:0.95;
-      margin-left:auto; margin-right:auto; /* centered */
-      line-height:1.55;
+  margin:10px 0 20px 0;
+  font-size:clamp(15px,2vw,18px);
+  color:#a7f3d0;           /* soft teal accent */
+  font-weight:500;
+  font-style: italic;       /* italic */
+  opacity:0.95;
+  white-space: nowrap;      /* prevents line break */
+  text-overflow: ellipsis;  /* trims if screen too small */
+  overflow: hidden;
+  text-align:center;
     }
     .hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px}
 
