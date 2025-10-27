@@ -4,14 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eva Mpagi — Data Scientist</title>
-  <meta name="description" content="Personal portfolio of Your Name: Data Scientist. Projects, CV, and contact." />
+  <meta name="description" content="Eva Mpagi — Data Scientist. Portfolio, CV, and selected projects." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0b0f14; --card:#0f1722; --muted:#a9b4c0; --border:#1e2a3a; --brand:#7aa2ff; --brand-2:#a78bfa;
-    }
+    :root{ --bg:#0b0f14; --card:#0f1722; --muted:#a9b4c0; --border:#1e2a3a; --brand:#7aa2ff; --brand-2:#a78bfa; }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#e6edf3;line-height:1.6}
@@ -20,23 +18,20 @@
 
     /* === HERO (Joanna-style dynamic header) === */
     .hero-wrap{position:relative;min-height:72vh;display:grid;place-items:center;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;background: radial-gradient(1200px 600px at 10% 10%, rgba(122,162,255,.15), transparent),
-                                         radial-gradient(900px 500px at 90% 20%, rgba(167,139,250,.14), transparent),
-                                         radial-gradient(700px 600px at 50% 90%, rgba(56,189,248,.10), transparent);
-              filter:saturate(110%)}
-    /* animated gradient overlay */
-    .hero-grad{position:absolute;inset:-50%;background:conic-gradient(from 0deg, #1f6feb33, #a78bfa33, #22d3ee33, #1f6feb33);
-               animation:spin 18s linear infinite}
+    .hero-bg{position:absolute;inset:0;background:
+      radial-gradient(1200px 600px at 10% 10%, rgba(122,162,255,.15), transparent),
+      radial-gradient(900px 500px at 90% 20%, rgba(167,139,250,.14), transparent),
+      radial-gradient(700px 600px at 50% 90%, rgba(56,189,248,.10), transparent);
+      filter:saturate(110%)}
+    .hero-grad{position:absolute;inset:-50%;background:conic-gradient(from 0deg, #1f6feb33, #a78bfa33, #22d3ee33, #1f6feb33);animation:spin 18s linear infinite}
     @keyframes spin{to{transform:rotate(360deg)}}
-    /* noise texture */
     .hero-noise{position:absolute;inset:0;opacity:.09;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2"/></filter><rect width="100" height="100" filter="url(%23n)" opacity="0.6"/></svg>')}
-    /* particle canvas sits on top */
     canvas#particles{position:absolute;inset:0;opacity:.55}
 
     .hero{position:relative;z-index:3;text-align:center;padding:80px 0}
-    .hero h1{font-size: clamp(32px, 6vw, 56px); margin:0 0 10px 0; font-weight:800; letter-spacing:.3px}
+    .hero h1{font-size:clamp(32px, 6vw, 56px);margin:0 0 10px 0;font-weight:800;letter-spacing:.3px}
     .hero .avatar{width:128px;height:128px;border-radius:9999px;object-fit:cover;border:2px solid var(--border);box-shadow:0 6px 30px rgba(122,162,255,.15);margin-bottom:14px;background:#0f1722}
-    .hero .tag{font-size:clamp(14px, 2.6vw, 18px); color:var(--muted); margin-bottom:18px}
+    .hero .tag{font-size:clamp(14px, 2.6vw, 18px);color:var(--muted);margin-bottom:18px}
     .hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
     .btn{display:inline-block;background:#1f6feb;border:1px solid #3a86ff;padding:10px 14px;border-radius:12px;color:white}
     .btn.ghost{background:transparent;border-color:var(--border)}
@@ -65,7 +60,7 @@
   <!-- Sticky top nav -->
   <header class="site">
     <div class="container site-inner">
-      <div class="brand">Your Name</div>
+      <div class="brand">Eva Mpagi</div>
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -81,21 +76,22 @@
     <div class="hero-grad"></div>
     <div class="hero-noise"></div>
     <canvas id="particles"></canvas>
-    <div class=\"hero container\">
-      <img class=\"avatar\" src=\"assets/profile.jpg\" alt=\"Your Name\"/>
+
+    <div class="hero container">
+      <img class="avatar" src="assets/profile.jpg" alt="Eva Mpagi"/>
       <h1>Eva Mpagi</h1>
-      <div class=\"tag\">Data Scientist — Kampala, Uganda</div>
-      <div class=\"cta\">
-        <a class=\"btn\" href=\"#projects\">View Projects</a>
-        <a class=\"btn ghost\" href=\"assets/cv.pdf\" target=\"_blank\" rel=\"noopener\">Download CV</a>
-        <a class=\"btn ghost\" href=\"https://github.com/your-username\" target=\"_blank\" rel=\"noopener\">GitHub</a>
+      <span class="badge">Data Science • Credit Risk • MLOps</span>
+      <div class="tag">Data Scientist — Kampala, Uganda</div>
+      <div class="cta">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn ghost" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a class="btn ghost" href="https://github.com/evampagi" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </div>
-  </div>
 
   <main class="container">
-    <!-- About (minimal) -->
+    <!-- About -->
     <section id="about" class="grid-2">
       <div class="card">
         <h2>About</h2>
@@ -111,7 +107,7 @@
       </div>
     </section>
 
-    <!-- Projects (minimal list like juniorcl) -->
+    <!-- Projects -->
     <section id="projects">
       <h2>Selected Projects</h2>
       <div class="list">
@@ -131,8 +127,8 @@
         </div>
         <div class="project">
           <div>
-            <strong>MNO Default Model</strong> — PD with alt‑data, challenger models, PSI alerts.
-            <br><small class="muted">scikit‑learn • MLflow • SQL</small>
+            <strong>MNO Default Model</strong> — PD with alt-data, challenger models, PSI alerts.
+            <br><small class="muted">scikit-learn • MLflow • SQL</small>
           </div>
           <div><a href="https://github.com/your-username/mno-default-model" target="_blank" rel="noopener">Repo →</a></div>
         </div>
@@ -146,7 +142,7 @@
       </div>
     </section>
 
-    <!-- CV & Contact (minimal) -->
+    <!-- CV & Contact -->
     <section id="cv" class="grid-2">
       <div class="card">
         <h2>CV</h2>
@@ -156,12 +152,12 @@
       <div id="contact" class="card">
         <h2>Contact</h2>
         <p class="muted">Email: <a href="mailto:you@email.com">you@email.com</a><br>
-        LinkedIn: <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">your‑handle</a></p>
+        LinkedIn: <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">your-handle</a></p>
       </div>
     </section>
 
     <footer>
-      © <span id="y"></span> Your Name • Built with GitHub Pages
+      © <span id="y"></span> Eva Mpagi • Built with GitHub Pages
     </footer>
   </main>
 
@@ -174,7 +170,7 @@
       const c = document.getElementById('particles');
       const ctx = c.getContext('2d');
       let width, height, dpr, particles;
-      const COUNT = 80; // tweak for more/less
+      const COUNT = 80;
 
       function resize(){
         dpr = window.devicePixelRatio || 1;
