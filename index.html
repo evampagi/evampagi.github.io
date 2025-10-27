@@ -56,6 +56,18 @@
       margin-bottom:14px; background:#0f1722;
     }
     .hero .tag{font-size:clamp(14px, 2.6vw, 18px);color:var(--muted);margin-bottom:18px}
+
+        /* NEW: Intro line style */
+    .intro-line{
+      margin:10px 0 20px 0;
+      font-size:clamp(15px,2vw,18px);
+      color:#a7f3d0;         /* soft teal accent */
+      font-weight:500;
+      opacity:0.95;
+      max-width:52ch;        /* comfortable line length */
+      margin-left:auto; margin-right:auto; /* centered */
+      line-height:1.55;
+    }
     .hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px}
 
     /* Buttons — TEAL design */
@@ -174,7 +186,7 @@
       <img class="avatar" src="assets/profile.jpg" alt="Eva Mpagi"/>
       <h1>Eva Mpagi</h1>
       <div class="tag">Data Scientist — Kampala, Uganda</div>
-      <div class="tag">Welcome to my portfolio, where I create, explore, and discover because play is the highest form of research</div>
+      <div class="intro-line">Welcome to my portfolio, where I create, explore, and discover because play is the highest form of research</div>
       <div class="cta">
         <a class="btn" href="#projects">View Projects</a>
         <a class="btn ghost" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
